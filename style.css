@@ -45,7 +45,7 @@ section h2{
     width: 10vh;
     height: 10vh;
     animation-delay: 1s;
-    animation: animate 2s ease-in-out forwards;
+    animation: animate 2s ease-in-out forwards linear infinite;
 }
 
 @keyframes animate{
@@ -70,7 +70,7 @@ section h2{
     }
 }
 section.active .banner .blocos{
-    animation: animate02 2s ease-in-out forwards;
+    animation: animate02 2s ease-in-out forwards linear infinite;
     background: url(./imagens/edu.jpeg) no-repeat;
     background-position: center;
     background-attachment: fixed;
