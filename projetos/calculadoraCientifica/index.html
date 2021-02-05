@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>CALCULADORA CIENTIFICA</title>
+</head>
+<body>
+    <form id="layout"  class="row gx-3 gy-2 align-items-center" name="sci-calc">
+    <table class="table table-dark table-striped" id="calculator" cellspacing="0" cellpadding="1">
+    <tr>
+    <td colspan="9">CALCULADORA CIENTÍFICA</td>
+    </tr>
+    <tr>
+    <td colspan="9"><input id="display" name="display" value="0" size="38" maxlength="25"></td>
+    </tr>
+    <tr>
+    <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="calc('acao', 'c')"></td>
+    <td><input type="button" class="btnTop" name="btnTop" value="del" onclick="calc('acao', 'del')"></td>
+    <td><input type="button" class="btnTop" name="btnTop" value="=" onclick="calc('acao', '=')"></td>
+    <td><input type="button" class="btnOpps" name="btnOpps" value="π" onclick="calc('valor', '3.14159265359')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="%" onclick="calc('acao', '-')"></td>
+    </tr>
+    <tr>
+    <td><input type="button" class="btnNum" name="btnNum" value="7" onclick="calc('valor', '7')"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="8" onclick="calc('valor', '8')"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="9" onclick="calc('valor', '9')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="p" onclick="calc('acao', '/')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="/" onclick="calc('acao', '/')"></td>
+    <tr>
+    <td><input type="button" class="btnNum" name="btnNum" value="4" onclick="calc('valor', '4')"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="5" onclick="calc('valor', '5')"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="6" onclick="calc('valor', '6')"></td>
+    <td><input type="button" class="btnOpps" name="btnOpps" value="ln"onclick="calc('acao', 'ln') "></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="*" onclick="calc('acao', '*')"></td>
+    </tr>
+    <tr>
+    <td><input type="button" class="btnNum" name="btnNum" value="1" onclick="calc('valor', '1')"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="2" onclick="calc('valor', '2')"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="3" onclick="calc('valor', '3')"></td>
+    <td><input type="button" class="btnOpps" name="btnOpps" value="√" onclick="calc('acao', '√')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="-" onclick="calc('acao', '-')"></td>
+    </tr>
+    <tr>
+    <td><input type="button" class="btnMath" name="btnMath" value="#$$$" onclick="changeSign(this.form.display)"></td>
+    <td><input type="button" class="btnNum" name="btnNum" value="0" onclick="calc('valor', '0')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="." onclick="calc('acao', '.')"></td>
+    <td><input type="button" class="btnOpps" name="btnOpps" value="x2" onclick="calc('acao', 'x2')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="+" onclick="calc('acao', '+')"></td>
+    </tr>
+    <tr>
+    <td><input type="button" class="btnMath" name="btnMath" value="(" onclick="calc('acao', '(')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value=")" onclick="calc('acao', ')')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="calc('acao', 'cos')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="sin" onclick="calc('acao', 'sin')"></td>
+    <td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="calc('acao', 'tan')"></td>
+    </tr>
+    </tabel>
+    </form>
+    </body>
+    <script src="js/calc.js"></script>
+</html>
