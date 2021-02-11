@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <title>Home Finance</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="logo">home finance$</h1>
+    </header>
+
+    <main id="container">
+
+        <section id="balance">
+            <h2 class="sr-only">Balanço</h2>
+
+            <div class="cards">
+                <h3>
+                    <span>Entradas</span>
+                    <span><img src="imagens/solta.png" alt="entrada" width="30px" height="30px"></span>
+                </h3>
+                <p>R$5.0000,00</p>
+            </div>
+
+           <div class="cards">
+            <h3><span>Saidas</span>
+                <span><img src="imagens/dinheiro.png" alt="saida" width="30px" height="30px"></span></h3>
+            <p>R$2.0000,00</p>
+           </div>
+        
+           <div class="total">
+            <h3>Total</h3>
+            <p>R$3.0000,00</p>
+           </div>
+        
+            
+        </section>
+       
+        <section id="transaction">
+
+            <h2 class="sr-only">Transações</h2>
+            <a href="Adicione nova Transação" class="button">Adicione nova Transação</a>
+    
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Data de entrada</th>
+                        <th>Data de saida</th>
+                        <th>Valor</th>
+                        <th>
+                            remover
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="description">Luz</td>
+                        <td class="date-in">10/02/2021</td>
+                        <td class="date-on">12/02/2021</td>
+                        <td class="expense">185,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+    </main>
+  
+
+    <div class="rodape">
+        <footer><p>
+            Home Finance
+        </p></footer>
+    </div>
+
+</body>
+
+</html>
