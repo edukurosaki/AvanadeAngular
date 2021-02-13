@@ -18,6 +18,7 @@ Este é um projeto de controle de finança pessoal possui os recursos bsicos par
 
 - :computer: Html5;
 - :computer: CSS;
+- 💻 Bootstrap;
 - :computer: Javascript;
 
 ## Pré-Requisitos
