@@ -1,84 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/bootstrap.css">
-    <title>Home Finance</title>
-</head>
+        <title>finance$.home</title>
 
-<body>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>FINANCE$ HOME</h1>
+        </header>
 
-    <header>
-        <h1 id="logo">home finance$</h1>
-    </header>
+        <main class="container">
+            <section id="balance">
+                <h2 class="sr-only">Balanço</h2>
 
-    <main id="container">
+                <div class="card">
+                    <h3>
+                        <span>
+                            Entradas
+                        </span>
+                        <img src="imagens/solta.png" alt="Image de entradas">
+                    </h3>
+                    <p id="incomeDisplay">R$ 0,00</p>
+                </div>
 
-        <section id="balance">
-            <h2 class="sr-only">Balanço</h2>
+                <div class="card">
+                    <h3>
+                        <span>
+                            Saídas
+                        </span>
+                        <img src="imagens/dinheiro.png" alt="Image de saídas">
+                    </h3>
+                    <p id="expenseDisplay">R$ 0,00</p>
+                </div>
 
-            <div class="cards">
-                <h3>
-                    <span>Entradas</span>
-                    <span><img src="imagens/solta.png" alt="entrada" width="30px" height="30px"></span>
-                </h3>
-                <p>R$5.0000,00</p>
+                <div class="card total">
+                    <h3>
+                        <span>
+                            Total
+                        </span>
+                        <img src="imagens/dinheiro.png" alt="Image de total">
+                    </h3>
+                    <p id="totalDisplay">R$ 0,00</p>
+                </div>
+                
+            </section>
+
+            <section id="transaction">
+                <h2 class="sr-only">Transações</h2>
+
+                <a href="#" 
+                onclick="Modal.open()"
+                class="button new">+ Nova Transação</a>
+                
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data Entrada</th>
+                            <th>Data Saida</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <div id="form">
+                    <h2>Nova Transação</h2>
+                    <form action="" onsubmit="Form.submit(event)">
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="description">Descrição</label>
+                            <input 
+                                type="text" 
+                                id="description" 
+                                name="description"
+                                placeholder="Descrição"
+                            />
+                        </div>
+
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="amount">Valor</label>
+                            <input 
+                                type="number"
+                                step="0.01"
+                                id="amount" 
+                                name="amount"
+                                placeholder="0,00"
+                            />
+                            <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
+                        </div>
+
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="date">Data</label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                name="date"
+                            />
+                        </div>
+
+                        <div class="input-group actions">
+                            <a 
+                            onclick="Modal.close()"
+                            href="#" 
+                            class="button cancel">Cancelar</a>
+                            <button>Salvar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
 
-           <div class="cards">
-            <h3><span>Saidas</span>
-                <span><img src="imagens/dinheiro.png" alt="saida" width="30px" height="30px"></span></h3>
-            <p>R$2.0000,00</p>
-           </div>
-        
-           <div class="total">
-            <h3>Total</h3>
-            <p>R$3.0000,00</p>
-           </div>
-        
+        <footer class="fixar-rodape">
+            <p>&copy; finance$.home <script type="text/javascript">document.write(new Date().getFullYear());</script></p>
             
-        </section>
-       
-        <section id="transaction">
+        </footer>
+        
 
-            <h2 class="sr-only">Transações</h2>
-            <a href="Adicione nova Transação" class="button">Adicione nova Transação</a>
-    
-            <table class="table table-success table-striped">
-                <thead>
-                    <tr>
-                        <th>Descrição</th>
-                        <th>Data de entrada</th>
-                        <th>Data de saida</th>
-                        <th>Valor</th>
-                        <th>
-                            remover
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="date-in">10/02/2021</td>
-                        <td class="date-on">12/02/2021</td>
-                        <td class="expense">185,00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    
-    </main>
-  
-
-    <div class="rodape">
-        <footer><p>
-            Home Finance
-        </p></footer>
-    </div>
-
-</body>
-
+        <script src="scripts/finans.js"></script>
+    </body>
 </html>
