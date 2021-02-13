@@ -15,7 +15,6 @@ Neste projeto de estudo ira conter os exercicios e projetos propostos pelo bootc
 
 ## Tecnologias Aplicadas
 
-- :computer: Visual studio Code
 - :computer: Html5;
 - :computer: CSS;
 - :computer: Javascript;
